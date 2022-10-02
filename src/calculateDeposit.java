@@ -37,11 +37,11 @@ public class calculateDeposit {
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
 
-        double result = 0;
+        double result = 0; //здесь переменную лучше перенести наверх метода к другим переменным
         if (action ==1) {
-            result = calculateSimplePercent(amount, 0.06, period);
+            result = calculateSimplePercent(amount, 0.06, period); //здесь лучше вынести процентную ставку в отдельную переменную, процентная ставка может меняться
         } else if (action == 2) {
-            result = calculateComplexPercent(amount, 0.06, period);
+            result = calculateComplexPercent(amount, 0.06, period); //здесь лучше вынести процентную ставку в отдельную переменную, процентная ставка может меняться
         }
 
         System.out.println("Результат вклада: " + amount + " за " + period
